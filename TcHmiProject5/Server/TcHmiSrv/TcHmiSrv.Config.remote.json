@@ -1,0 +1,11 @@
+{
+    "CERTIFICATEEXPIRATION": "P14000D",
+    "REQUIREAUTH": 2,
+    "VIRTUALDIRECTORIES": {
+        "/": "www",
+        "/C:\\Users\\VM\\Desktop\\Test": "C:\\Users\\VM\\Desktop\\Test",
+        "/C:\\Users\\VM\\Desktop\\ttt": "..\\..\\..\\..\\..\\Desktop\\ttt",
+        "/FileExplorerTest": "..\\..\\..\\..\\..\\..\\..\\FileExplorerTest",
+        "ttt": "..\\..\\..\\..\\..\\Desktop\\ttt"
+    }
+}

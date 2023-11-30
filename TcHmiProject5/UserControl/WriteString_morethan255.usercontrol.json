@@ -1,0 +1,25 @@
+{
+  "parameters": [
+    {
+      "name": "data-tchmi-ssymbolpath",
+      "displayName": "sSymbolPath",
+      "allowSymbolExpressionsInObject": false,
+      "visible": true,
+      "type": "tchmi:general#/definitions/String",
+      "category": "Parameter",
+      "description": "ex)PLC1.MAIN.sTest",
+      "defaultValue": "PLC1",
+      "requiredOnCompile": false,
+      "readOnly": false,
+      "bindable": true,
+      "heritable": true,
+      "propertyName": "sSymbolPath",
+      "propertySetterName": "setSSymbolPath",
+      "propertyGetterName": "getSSymbolPath",
+      "refTo": ""
+    }
+  ],
+  "virtualRights": [],
+  "$schema": "./../../Packages/Beckhoff.TwinCAT.HMI.Framework.12.760.42/runtimes/native1.12-tchmi/Schema/UserControlConfig.Schema.json",
+  "description": ""
+}

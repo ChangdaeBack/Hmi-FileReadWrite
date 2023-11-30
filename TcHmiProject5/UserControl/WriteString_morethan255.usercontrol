@@ -1,0 +1,49 @@
+<div id="WriteString_morethan255" data-tchmi-type="TcHmi.Controls.System.TcHmiUserControl" data-tchmi-top="0" data-tchmi-left="0" data-tchmi-width="100" data-tchmi-height="100" data-tchmi-width-unit="%" data-tchmi-height-unit="%" data-tchmi-creator-viewport-width="500" data-tchmi-creator-viewport-height="500" data-tchmi-width-mode="Value" data-tchmi-height-mode="Value">
+
+<div id="TextBox" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextbox" data-tchmi-height="100" data-tchmi-height-unit="%" data-tchmi-left="0" data-tchmi-left-unit="px" data-tchmi-top="0" data-tchmi-top-unit="px" data-tchmi-width="100" data-tchmi-width-unit="%" data-tchmi-word-wrap="true" data-tchmi-multiline="true">
+<script data-tchmi-target-attribute="data-tchmi-content-padding" type="application/json">
+{
+  "top": 3,
+  "right": 3,
+  "bottom": 3,
+  "left": 3
+}
+</script>
+
+
+<script data-tchmi-target-attribute="data-tchmi-trigger" type="application/json">
+[
+  {
+    "event": "TextBox.onUserInteractionFinished",
+    "actions": [
+      {
+        "objectType": "JavaScript",
+        "active": true,
+        "sourceLines": [
+          "var SymbolPath = TcHmi.Symbol.readEx('%pp%sSymbolPath%/pp%');",
+          "var value= TcHmi.Symbol.readEx('%pp%sStringToPLC%/pp%');",
+          "",
+          "SymbolPath ='%s%'+SymbolPath+'%/s%';",
+          "",
+          "var Textbox_text = TcHmi.Symbol.readEx('%ctrl%TextBox::Text%/ctrl%');",
+          "",
+          "TcHmi.Symbol.writeEx(SymbolPath, Textbox_text, function (data) {",
+          "    if (data.error === TcHmi.Errors.NONE) {",
+          "        // Handle success... ",
+          "        ",
+          "    } else {",
+          "        // Handle error... ",
+          "        console.log('WriteEx Error');",
+          "    }",
+          "});"
+        ],
+        "injectContextObject": false,
+        "asyncWait": true,
+        "waitMode": "Synchronous"
+      }
+    ]
+  }
+]
+</script>
+</div>
+</div>
